@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="radioStyle.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiveRadio | KokeJuara</title>
+  </head>
+  <body onload="menuEnPantalla()">
+    <content class="ipodBase">
+      <section class="ipodPantalla">
+        <div class="ipodPantallaDentro" id="pantalla"></div>
+      </section>
+      <section class="ipodMenu">
+        <div class="ipodCircle">
+          <div class="ipodRewind" id="botonAtras" onclick="playPrevRadio()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-player-skip-back-filled"
+              width="30"
+              height="30"
+              viewBox="0 0 40 40"
+              stroke-width="1.5"
+              stroke="#2c3e50"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M20.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z"
+                stroke-width="0"
+                fill="#333"
+                transform="translate(3, 0)"
+              />
+              <path
+                d="M9.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z"
+                stroke-width="0"
+                fill="#333"
+                transform="translate(3, 0)"
+              />
+              <path
+                d="M4 4a1 1 0 0 1 .993 .883l.007 .117v14a1 1 0 0 1 -1.993 .117l-.007 -.117v-14a1 1 0 0 1 1 -1z"
+                stroke-width="0"
+                fill="#333"
+              />
+            </svg>
+          </div>
+          <div class="ipodCircleCenter"></div>
+          <div class="ipodNext" id="botonSiguiente" onclick="playNextRadio()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-player-skip-back-filled"
+              width="30"
+              height="30"
+              viewBox="0 0 40 40"
+              stroke-width="1.5"
+              stroke="#2c3e50"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              transform="scale(-1, 1)"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M20.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z"
+                stroke-width="0"
+                fill="#333"
+                transform="translate(3, 0)"
+              />
+              <path
+                d="M9.341 4.247l-8 7a1 1 0 0 0 0 1.506l8 7c.647 .565 1.659 .106 1.659 -.753v-14c0 -.86 -1.012 -1.318 -1.659 -.753z"
+                stroke-width="0"
+                fill="#333"
+                transform="translate(3)"
+              />
+              <path
+                d="M4 4a1 1 0 0 1 .993 .883l.007 .117v14a1 1 0 0 1 -1.993 .117l-.007 -.117v-14a1 1 0 0 1 1 -1z"
+                stroke-width="0"
+                fill="#333"
+              />
+            </svg>
+          </div>
+          <div class="ipodPlay" id="botonPlayPause" onclick="play()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-player-play-filled"
+              width="30"
+              height="30"
+              viewBox="0 0 40 40"
+              stroke-width="1.5"
+              stroke="#2c3e50"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z"
+                stroke-width="0"
+                fill="#333"
+              />
+              <path
+                d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z"
+                stroke-width="0"
+                fill="#333"
+                transform="translate(18)"
+              />
+              <path
+                d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z"
+                stroke-width="0"
+                fill="#333"
+                transform="translate(18)"
+              />
+            </svg>
+          </div>
+          <div class="ipodMenuOption" id="botonMenu" onclick="menuRadio()">MENU</div>
+        </div>
+      </section>
+    </content>
+    <footer class="foot">
+      <hr />
+      <div><a href="https://www.kokejuara.com/" target="_blank">About me</a> | <a href="https://github.com/kokejuara/DeviCeSS" target="_blank">GitHUB Repository</a></div>
+    </footer>
+    </body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/@davland7/rplayer/dist/rplayer.min.js"></script>
+<script type="text/javascript">
+  // Elementos:
+  const audio = new rPlayer();
+  let datos;
+  let radioSelected = null;
+  let radioPlaying = false;
+  let changeRadio = false;
+
+  const pantalla = document.getElementById("pantalla");
+  
+  const setPlaying = (newState) => {
+    const bannerText = document.getElementById("textBanner")
+    const iconBanner = document.getElementById("iconBanner")
+    if(newState){
+        bannerText.innerText = "Now Playing"
+        iconBanner.innerHTML = `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="15" height="15" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" fill="#13A8DC" stroke="#0A556F" />
+                    </svg>`
+        radioPlaying = true;
+    }else{
+        bannerText.innerText ="Music stopped"
+        iconBanner.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause-filled" width="15" height="15" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor" />
+                        <path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor" />
+                    </svg>`
+        radioPlaying = false;
+    }
+  }
+  const play = () => {
+
+    if (!radioPlaying || changeRadio) {
+        try{
+      audio.playSrc(radioSelected.audiofile);
+      audio.play();
+      setPlaying(true)
+      changeRadio = false
+    }catch(err){
+        console.log(err)
+    }
+    } else {
+      audio.stop();
+      setPlaying(false)
+    }
+  };
+  const getApiRadios = async () => {
+    const fetchAPIRadios = await fetch(
+      "https://liveradio.kokejuara.com/api.php?t=getApiRadios",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        let i = 1;
+        data.map((item) => {
+          item.key = i;
+          i++;
+        });
+        datos = data;
+      })
+      .catch((error) => alert("Error: Ocurrió un error al consumir la API."));
+  };
+  const loadRadio = (radioId) => {
+    const radioFiltrada = datos.filter((radio) => radio?.key === radioId);
+    radioSelected = radioFiltrada[0];
+    if(radioPlaying) {
+      changeRadio = true
+      play()
+    }
+    pantalla.innerHTML = `
+        <div class="radioPlaying">
+            <div class="nowPlaying">
+                <span id="iconBanner">
+                    ${
+                      radioPlaying
+                        ? `
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play-filled" width="15" height="15" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z" stroke-width="0" fill="#13A8DC" stroke="#0A556F" />
+                    </svg>`
+                        : `<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-pause-filled" width="15" height="15" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor" />
+                        <path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z" stroke-width="0" fill="currentColor" />
+                    </svg>`
+                    }
+
+                </span>
+                <span id="textBanner">${radioPlaying ? "Now Playing" : "Music stopped"}</span>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-battery-filled" width="15" height="15" viewBox="0 0 24 24" stroke-width="1.5" stroke="#A1D888" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M17 6a3 3 0 0 1 2.995 2.824l.005 .176v.086l.052 .019a1.5 1.5 0 0 1 .941 1.25l.007 .145v3a1.5 1.5 0 0 1 -.948 1.395l-.052 .018v.087a3 3 0 0 1 -2.824 2.995l-.176 .005h-11a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-6a3 3 0 0 1 2.824 -2.995l.176 -.005h11z" stroke-width="1" stroke="#527541" fill="#A1D888" />
+                    </svg>
+                </span>
+            </div>
+            <span class="numberPlaying">${radioSelected.id} of ${
+      datos.length
+    }</span>
+            <div class="radioPlayingInfo">
+                <img src="${radioSelected.logo}" width="90">
+                <div class="radioPlayingInfoContent">
+                    <span>${radioSelected.name}</span>
+                    <span>${radioSelected.type}</span>
+                    <span>${radioSelected.country}</span>
+                </div>
+            </div>
+        </div>`;
+  };
+  const playNextRadio = () => {
+    if (radioSelected?.key + 1 < datos.length) {
+      loadRadio(radioSelected?.key + 1);
+      changeRadio = true
+    }
+  };
+  const playPrevRadio = () => {
+    if (radioSelected?.key - 1 > 0) {
+      loadRadio(radioSelected?.key - 1);
+      changeRadio = true
+    }
+  };
+  
+  const menuRadio = () => {
+    let showRadioList = '';
+    datos.forEach(radioItem => {
+      showRadioList += `<div class="radioListItem ${radioItem?.key === radioSelected?.key && ('radioListItemSelected')}" onclick="loadRadio(${radioItem.key})">${radioItem?.name}</div>`
+    })
+    pantalla.innerHTML = `
+      <div class="menuContent">
+        <div class="optionsRadioContent">
+            ${showRadioList}
+        </div>
+        <div class="radioSelectedImage" style="background: url('${radioSelected?.logo}')"></div> 
+      </div>
+    `
+  }
+  const menuEnPantalla = async () => {
+    pantalla.innerHTML = `<div class="ipodPantallaDentro loadingContent">
+    <img src="https://www.kokejuara.com/assets/img/logo_rojo.png" width="80"/>
+    <span class="loading">Loading...</span>
+    </div>`;
+    await getApiRadios();
+    loadRadio(1);
+  };
+</script>
